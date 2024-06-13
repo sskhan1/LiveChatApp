@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../styledComponents/signup";
 
-const Signup: React.FC = () => {
+const SignUp: React.FC = () => {
   return (
     <Container>
       <input></input>
@@ -9,7 +9,7 @@ const Signup: React.FC = () => {
   );
 };
 
-export default Signup;
+export default SignUp;
 
 
 //React hook form 
