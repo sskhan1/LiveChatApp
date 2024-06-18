@@ -1,12 +1,11 @@
-import mongoose from 'mongoose';
+const mongoose = require("mongoose");
 
-const connectDatabase = async (): Promise<void> => {
-  try {
-    await mongoose.connect(process.env.DATABASE_URL as string);
-    console.log('DB is connected!');
-  } catch (err) {
-    console.error('DB connection error:', err);
-  }
+const connectDatabaseMongo = () => {
+  mongoose.connect(process.env.DATABASE_URL)
+    .then(() => {
+      console.log(`DB is connected!`);
+    })
+    .catch((err: Error) => console.log(err));
 };
 
-export default connectDatabase;
+module.exports = connectDatabaseMongo;

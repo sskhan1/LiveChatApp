@@ -1,4 +1,4 @@
-const app = require("./index");
+const application = require("./index");
 
 const dotenv = require("dotenv");
 // const cloudinary = require("cloudinary");
@@ -26,7 +26,7 @@ connectDatabase();
 
 
 
-const server = app.listen(process.env.PORT, () => {
+const server = application.listen(process.env.PORT, () => {
  console.log(`Server is working on http://localhost:${process.env.PORT}`);
 });
 
